@@ -70,3 +70,20 @@ Além disso, se a saída do comparador for 1, o túnel Verifica será ativado, q
 
 ![image](https://github.com/user-attachments/assets/b0345e9b-09ee-4ed6-91b1-01413432f6ca)
 
+## Verificações
+Existem duas coisas que não podem ser feitas, para o jogo funcionar como esperado:
+* Escolher o mesmo número duas vezes na mesma rodada
+* Escolher um número que já foi acertado
+Para isso, é necessário fazer verificações que validem a escolha do usuário. Para o primeiro caso, bastar comparar os valores dos túneis Linha-N1 e Coluna-N1 com os valores atuais dos contadores, que passam seus valores para os túneis !Linha e !Coluna.
+Se eles forem iguais, a saída do comparador muda o valor do túnel V1, o que significa que o número não poderá ser escolhido.
+
+![image](https://github.com/user-attachments/assets/4c1ccad2-f5ef-485a-a22b-8d7580437bbd)
+
+Para o segundo, é necessário comparar o túnel AcertadoXX com os leds. Se os túneis AcertadoXX e LXX representarem a mesma coordenada, significa que o jogador está tentando escolher um número já acertado, então o túnel V2 será ativado. 
+
+![image](https://github.com/user-attachments/assets/31a3e8cb-8c23-4d90-817b-464ce377acce)
+
+Se V1 ou V2 estiverem ativos, o jogador não poderá escolher o número selecionado.  
+
+![image](https://github.com/user-attachments/assets/e933bcaf-ee85-429b-959a-f81d2f8fc378)
+![image](https://github.com/user-attachments/assets/abaa8cb2-cc42-471d-aaa2-25c955e0b82e)
