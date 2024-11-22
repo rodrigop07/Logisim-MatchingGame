@@ -52,3 +52,11 @@ A saída da porta OR passa é recebids pelo túnel MuxXX, o qual é conectado ao
 oculto. Se o valor do túnel for 1, a saída do multiplexador será o número definido para o display correspondente.  
 
 ![image](https://github.com/user-attachments/assets/4c3fe76b-c6b4-4e86-b6c9-0bef4fadea11)
+
+## Alternando entre os jogadores
+A alternação entre os jogadores é feita por meio de um contador de um bit. O valor do contador é incrementado cada vez que se atinge o estado 0. A saída do contador é conectada aos túneis jogador 1 e jogador 2, com o valor do túnel jogador 1 negado.
+Dessa forma, quando o contador está no valor 0 o túnel jogador 1 terá o valor 1 e o túnel jogador 2 terá o valor 0 e vice-versa.  
+
+![image](https://github.com/user-attachments/assets/9965cbb6-c7be-46e3-adff-930229433265)
+
+## Fazendo pontos
