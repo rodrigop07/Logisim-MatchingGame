@@ -18,12 +18,22 @@ Cada rodada é dividida em diferentes estados, que servem para identificar o est
 
 ## Escolhendo os números
 A seleção dos números é feita por meio de coordenadas, as quais são controladas por dois contadores de dois bits, um para as coordenadas da linha e outro para as coordenadas da coluna, ambos indo de 0 a 3.  
-Os contadores têm seu valor incrementado por meio de dois botões, um responsável por navegar entre as linhas, e o outro, pelas colunas, ou seja, a cada pulso de do botão o contador incrementa um ao seu valor atual. Ao chegar no valor máximo, o contador volta pro início. Além disso, há, na saída desses contadores, os túneis !Linha e !Coluna que se ligam em dois registradores, os quais recebem o valor atual de cada contador.    
+Os contadores têm seu valor incrementado por meio de dois botões, um responsável por navegar entre as linhas, e o outro, pelas colunas, ou seja, a cada pulso de do botão o contador incrementa um ao seu valor atual. Ao chegar no valor máximo, o
+contador volta pro início. Além disso, há, na saída desses contadores, os túneis !Linha e !Coluna que se ligam em dois registradores, os quais recebem o valor atual de cada contador. 
 
-![image](https://github.com/user-attachments/assets/8f860c5a-bd1c-4163-a2d6-7e987344a1cb)
+![image](https://github.com/user-attachments/assets/8f860c5a-bd1c-4163-a2d6-7e987344a1cb)  
+
+Para ter um referência visual de qual display a coordenada atual representa, há um circuito que verifica os valores dos contadores e acende leds da acima do displays da posição correspondente. Dessa forma, se o contador da linha apresentar o valor 00 e o 
+contador da coluna o valor 01, o led L01, que corresponde à essa coordenada, será ativado, e assim por diante.  
+
+![image](https://github.com/user-attachments/assets/7822b0d9-5122-417a-be08-276ed970d20f)  
 
 Após atingir a coordenada do primeiro número que se deseja selecionar, o jogador pressiona o botão "Confirma" que emite um pulso de clock para o registrador que grava as coordenadas da linha e para o registrador que grava as coordenadas da coluna.
 A saída do registrador da linha é conectada ao túnel Linha-n1, e o segundo registrador ao túnel Coluna-N2. De forma análoga, é registrada a coordenada do segundo número.  
 
 ![image](https://github.com/user-attachments/assets/fcfcc7c5-db58-4f41-80f3-9166dbc280a7)
 
+## Mostrando os números
+O conteúdo dos displays é exibido em dois casos:
+* O jogador escolheu determinado display durante a rodada
+* O par ao qual pertence o número de determinado display foi acertado
