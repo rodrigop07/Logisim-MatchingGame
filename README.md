@@ -60,4 +60,13 @@ Dessa forma, quando o contador está no valor 0 o túnel jogador 1 terá o valor
 ![image](https://github.com/user-attachments/assets/9965cbb6-c7be-46e3-adff-930229433265)
 
 ## Fazendo pontos
-Após os dois números serem selecionados, dois multiplexadores recebem as coordenadas de Linha-N1 e Coluna-N1
+Após os dois números serem selecionados, dois multiplexadores recebem as coordenadas dos túneis Linha-N1 e Coluna-N1 e dos túneis Linha-N2 e Coluna-N2 e seleciona a saida de acordo com as coordenadas. Em seguida, os números selecionados entram em um
+comparador que retorna 1 se els forem iguais e 0 caso contrário. A saída do comparador é conectada a dois contadores que representam a pontuação de cada jogador. Caso a saída do contador seja 1, o contador que representa a pontuação do jogador atual é
+incrementado em uma unidade.  
+
+![image](https://github.com/user-attachments/assets/0bee3132-99ad-4061-afa2-6c76f1b0359f)
+
+Além disso, se a saída do comparador for 1, o túnel Verifica será ativado, que servirá para indicar que os túneis AcertadoXX das posições dos números escolhidos devem ser ativados, o que indicará que o par foi acertado e não poderá mais ser escolhido.  
+
+![image](https://github.com/user-attachments/assets/b0345e9b-09ee-4ed6-91b1-01413432f6ca)
+
