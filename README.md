@@ -60,3 +60,4 @@ Dessa forma, quando o contador está no valor 0 o túnel jogador 1 terá o valor
 ![image](https://github.com/user-attachments/assets/9965cbb6-c7be-46e3-adff-930229433265)
 
 ## Fazendo pontos
+Após os dois números serem selecionados, dois multiplexadores recebem as coordenadas de Linha-N1 e Coluna-N1
