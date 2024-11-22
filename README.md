@@ -37,7 +37,7 @@ A saída do registrador da linha é conectada ao túnel Linha-n1, e o segundo re
 
 ![image](https://github.com/user-attachments/assets/fcfcc7c5-db58-4f41-80f3-9166dbc280a7)
 
-## Mostrando os números
+## Exibindo os números
 O conteúdo dos displays é exibido em dois casos:
 * O jogador escolheu determinado display durante a rodada
 * O par ao qual pertence o número de determinado display foi acertado
